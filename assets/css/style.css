@@ -1,0 +1,25 @@
+body {
+    background-image:url("/Users/quinnlopes/Documents/Development/Assignments/unit-4-game/assets/images/stardust.png");
+}
+
+.ice-Image {
+    height: 150px;
+    width: 150px;
+}
+
+.box {
+    display: block;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    margin: 2px;  
+}
+
+#box1 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    font-size: 150%;
+    width: 20.5%;
+}
+
+#box2, #box3, #box4 {
+    width: 58%;
+}
