@@ -3,18 +3,18 @@ var losses = 0;
 var iceNumbers = [];
 var total = 0;
 
-$('#numWins').text(wins);
-$('#numLosses').text(losses);
+$('#wins').text(wins);
+$('#losses').text(losses);
 
 $(document).ready(function () {
-    var targetNumber = Math.floor(Math.random() * 121 + 19)
+    var targetNumber = Math.floor(Math.random() * 120 + 19)
     $('#compScore').text(targetNumber);
 });
 
 function numberOptions() {
     for (var i = 0; i < 4; i++) {
-        var num = Math.floor(Math.random() * 12 + 1);
-        iceNumbers.push(num);
+        var number = Math.floor(Math.random() * 12 + 1);
+        iceNumbers.push(number);
     }
 }
 numberOptions();
@@ -43,3 +43,55 @@ function broke() {
     $('#losses').text(losses);
     reset();
 }
+
+$("#ice1").on('click', function() {
+    total = total + numberOptions[0];
+    $("yourTotal").text(total);
+
+    if (total === targetNumber) {
+        rich();
+    }
+    else if (total > targetNumber){
+        broke();
+    }
+
+});
+
+$("#ice2").on('click', function() {
+    total = total + numberOptions[1];
+    $("yourTotal").text(total);
+
+    if (total === targetNumber) {
+        rich();
+    }
+    else if (total > targetNumber){
+        broke();
+    }
+
+});
+
+$("#ice3").on('click', function() {
+    total = total + numberOptions[2];
+    $("yourTotal").text(total);
+
+    if (total === targetNumber) {
+        rich();
+    }
+    else if (total > targetNumber){
+        broke();
+    }
+
+});
+
+$("#ice4").on('click', function() {
+    total = total + numberOptions[3];
+    $("yourTotal").text(total);
+
+    if (total === targetNumber) {
+        rich();
+    }
+    else if (total > targetNumber){
+        broke();
+    }
+
+});
