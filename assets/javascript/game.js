@@ -3,9 +3,6 @@ var losses = 0;
 var iceNumbers = [];
 var total = 0;
 
-$('#wins').text(wins);
-$('#losses').text(losses);
-
 $(document).ready(function () {
     var targetNumber = Math.floor(Math.random() * 120 + 19)
     $('#compScore').text(targetNumber);
@@ -45,7 +42,7 @@ function broke() {
 }
 
 $("#ice1").on('click', function() {
-    total = total + numberOptions[0];
+    total = total + iceNumbers[0];
     $("yourTotal").text(total);
 
     if (total === targetNumber) {
@@ -55,10 +52,10 @@ $("#ice1").on('click', function() {
         broke();
     }
 
-});
+})
 
 $("#ice2").on('click', function() {
-    total = total + numberOptions[1];
+    total = total + iceNumbers[1];
     $("yourTotal").text(total);
 
     if (total === targetNumber) {
@@ -68,10 +65,10 @@ $("#ice2").on('click', function() {
         broke();
     }
 
-});
+})
 
 $("#ice3").on('click', function() {
-    total = total + numberOptions[2];
+    total = total + iceNumbers[2];
     $("yourTotal").text(total);
 
     if (total === targetNumber) {
@@ -81,10 +78,10 @@ $("#ice3").on('click', function() {
         broke();
     }
 
-});
+})
 
 $("#ice4").on('click', function() {
-    total = total + numberOptions[3];
+    total = total + iceNumbers[3];
     $("yourTotal").text(total);
 
     if (total === targetNumber) {
