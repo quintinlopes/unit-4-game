@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     function rich() {
         wins++;
-        $("#win-lose").html("<h2>Winner!</h2>");
+        $("#win-lose").html("<h3>Winner!</h3>");
         $("#wins").html("<h3>" + wins + "</h3>");
         $('#wins').text(wins);
         reset();
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     function broke() {
         losses++;
-        $("#win-lose").html("<h2>Loser!</h2>");
+        $("#win-lose").html("<h3>Loser!</h3>");
         $("#losses").html("<h3>" + losses + "</h3>");
         $('#losses').text(losses);
         reset();
